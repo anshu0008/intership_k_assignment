@@ -5,7 +5,7 @@ import Search from "@/public/assets/icons/Search.svg";
 import Image from "next/image";
 import { Folder, Notification, Activities, Check } from "@/public/assets";
 import { useStateContext } from "@/context/StateContext";
-import { createTheme } from '@mui/material/styles';
+import Divider from '@mui/material/Divider';
 
 import {
   Avatar,
@@ -31,9 +31,9 @@ const Navbar = () => {
 
   return (
 
-    <div className="flex bg-[#15132B] w-full h-[100px] items-center justify-between pl-5 pr-5 lg:p-0 lg:justify-evenly">
+    <div className="flex bg-[#15132B] min-w-full h-[100px] items-center justify-between pl-5 pr-5 lg:p-0 lg:justify-evenly">
       <div className="flex justify-center items-center gap-10">
-        <h1 className="text-white font-sans text-lg">weframtech</h1>
+        <h1 className="text-white font-sans font-bold text-sm sm:text-2xl">weframtech</h1>
         <Image
           src={Hamburger}
           alt="hamburger"
@@ -48,7 +48,7 @@ const Navbar = () => {
           placeholder="Search Here ..."
         />
       </div>
-      <div className="hidden md:flex justify-center items-center">
+      <div className="hidden lg:flex justify-center items-center">
         <p className="text-[#6418C3] border-b-2 border-[#6418C3] hover:cursor-pointer text-sm ">
           OTHER MENUS
         </p>
@@ -112,14 +112,14 @@ const Navbar = () => {
           </div>
         </FormControl>
       </div>
-
       <div
-        className="flex justify-evenly items-center lg:gap-5 cursor-pointer"
+        className="flex justify-evenly items-center gap-5 cursor-pointer"
         onClick={() => setClick(!click)}
       >
-        <div className="rounded-full lg:rounded-lg bg-[#C4C4C4] w-[57px] h-[57px]"></div>
-        <div className="hidden lg:flex flex-col justify-center items-start gap-2">
-          <h2 className="text-bold text-md">Instructor Day</h2>
+      <Divider orientation="vertical" flexItem />
+        <div className="rounded-lg bg-[#C4C4C4] w-[57px] h-[57px]"></div>
+        <div className="flex flex-col justify-center items-start gap-1">
+          <h2 className="text-bold xs:text-md text-xs">Instructor Day</h2>
           <p className="text-[#7879F1] text-xs font-thin">Super Admin</p>
         </div>
         <div className="">
@@ -128,7 +128,7 @@ const Navbar = () => {
             alt="sideArrow"
             width={10}
             height={10}
-            className="hidden lg:block cursor-pointer"
+            className="block cursor-pointer"
           />
           {click && (
             <div className="absolute flex flex-col justify-center items-center h-fit w-fit p-4 top-20 right-10 bg-[#211A75] text-white rounded-lg cursor-pointer gap-6">

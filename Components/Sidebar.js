@@ -17,7 +17,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { Avatar,FormControl, IconButton, MenuItem, Select } from "@mui/material";
 import { Arrow, Arrow2 } from "@/public/assets";
 import { Language } from "@/utils/Constants";
-
+import { Folder, Notification, Activities, Check } from "@/public/assets";
 
 
 
@@ -40,8 +40,8 @@ const Sidebar = () => {
   return (
     <div className="bg-[#15132B] overflow-x: hidden;h-screen">
       <DrawerHeader>
-        <div className="flex justify-center items-center gap-5 mt-6 mr-10 h-[75px]">
-          <h1 className="text-white font-sans text-lg">weframtech</h1>
+        <div className="flex items-center gap-5 mt-6 mr-10 h-[75px]">
+          <h1 className="text-white font-sans font-bold text-2xl">weframtech</h1>
           <IconButton
             onClick={() => setDrawerOpen(!drawerOpen)}
             sx={{ color: "#E9ECFF" }}
@@ -53,54 +53,44 @@ const Sidebar = () => {
       <Divider />
 
       {/*  */}
-      <div className="flex lg:hidden flex-col justify-center items-start ml-[40px] mt-[50px] gap-6">
-      <div className="flex justify-start items-center  w-[200px] h-[50px] bg-[#211A75] rounded-full gap-4 text-[#AAAAAA]">
+      <div className="flex lg:hidden flex-col justify-center items-center gap-6 max-w-full p-5">
+      <div className="flex justify-start items-center  w-full h-[50px] bg-[#211A75] rounded-full gap-4 text-[#AAAAAA]">
+
         <Image alt="search" src={Search} height={20} width={20} className=" ml-[10px]" />
         <input
-          className="outline-0 border-none bg-[#211A75] w-[100px] hover:outline-0"
+          className="outline-0 border-none bg-[#211A75] w-[100px] hover:outline-0 text-xs"
           placeholder="Search Here ..."
         />
       </div>
-      <div className="flex">
-        <FormControl>
-          <div className="">
-            <Select
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              displayEmpty
-              sx={{
-                borderRadius: "9999px",
-                width: 200,
-                height: 60,
-                backgroundColor: "#211A75",
-                color: "white",
-              }}
-            >
-              <MenuItem value="">
-                <em>Language</em>
-              </MenuItem>
-              {Language.map(({ language, id, url },index) => (
-                <MenuItem value={language} key={index}>
-                  <div
-                    key={id}
-                    className="flex justify-center items-center gap-2 "
-                  >
-                    <Avatar alt={language} src={url} />
-
-                    <span>{language}</span>
-                  </div>
-                </MenuItem>
-              ))}
-            </Select>
-          </div>
-        </FormControl>
+      <div className="flex 2xl:hidden justify-center items-center">
+        <Image
+          alt="icons"
+          src={Notification}
+          className="h-h-[70px] w-[70px]  cursor-pointer"
+        />
+        <Image
+          alt="icons"
+          src={Activities}
+          className="h-[70px] w-[70px]  cursor-pointer"
+        />
+        <Image
+          alt="icons"
+          src={Check}
+          className="h-[70px] w-[70px] cursor-pointer"
+        />
+        <Image
+          alt="icons"
+          src={Folder}
+          className="h-[70px] w-[70px]  cursor-pointer"
+        />
       </div>
+
       </div>
       {/*  */}
       <Divider />
       <div className="flex flex-col gap-[100px]">
       <div className="flex flex-col items-start justify-center gap-5 mt-10 max-w-[299px] overflow-hidden">
-        <h3 className="text-white font-sans  pl-[20px] text-sm">MAIN MENU</h3>
+        <h3 className="text-white font-sans  pl-[20px] font-bold text-2xl">MAIN MENU</h3>
         <List>
           {sidebar_comp.map(({ name, id, url,url_hover },index) => (
             <ListItem key={index} disablePadding>
