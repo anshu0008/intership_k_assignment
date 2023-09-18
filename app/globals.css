@@ -1,6 +1,6 @@
 @tailwind base;
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind components;
+@tailwind utilities;
 
 body {
   background: #0D0B21;
