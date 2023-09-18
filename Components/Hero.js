@@ -3,6 +3,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Slider } from "@mui/material";
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 
 const defaultTheme = createTheme();
 const theme = createTheme({
@@ -27,12 +28,7 @@ const Hero = () => {
     <ThemeProvider theme={theme}>
       <div className="flex flex-col xl:flex-row justify-between items-start w-[95vw] h-fit m-10 p-10 rounded-lg bg-[#15132B] text-white gap-10">
         <div className="flex justify-center items-start gap-5">
-            <Image
-              alt="side_btn"
-              width={38}
-              height={38}
-              src="/assets/icons/Side_Btn.svg"
-            />
+           <ArrowCircleLeftIcon sx={{height:38,width:38}} />
           <div className="flex flex-col justify-center items-start gap-5">
             <h1 className="text-white font-bold text-lg">
               School November Tasks
