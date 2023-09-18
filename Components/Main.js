@@ -52,7 +52,7 @@ const theme = createTheme({
 const Main = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="mt-2 p-10 flex flex-wrap justify-evenly items-start gap-6">
+      <div className="mt-12 flex flex-wrap justify-evenly items-start gap-6 w-full">
         {Main_Container.map(({head,data},index)=>(
 
      

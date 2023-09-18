@@ -26,7 +26,7 @@ const theme = createTheme({
 const Hero = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="flex items-start justify-normal w-[98vw] sm:max-w-[98vw] h-fit m-5 p-10 rounded-lg bg-[#15132B] text-white gap-10">
+      <div className="flex items-start justify-normal h-fit lg:w-[100vw] max-w-[95vw] p-10 ml-5 lg:ml-10 mt-10 m-5 lg:mr-10 rounded-lg bg-[#15132B] text-white gap-10">
         <ArrowCircleLeftIcon
           sx={{ height: 38, width: 38 }}
           className="hidden xl:block"

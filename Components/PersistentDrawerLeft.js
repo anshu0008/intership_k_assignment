@@ -50,7 +50,7 @@ export default function PersistentDrawerLeft() {
       >
        <Sidebar />
       </Drawer>
-      <div className="flex flex-col absolute top-[100px]">
+      <div className="flex flex-col items-start justify-between absolute top-[100px] w-full">
         <Hero />
         <Main />
       </div>
